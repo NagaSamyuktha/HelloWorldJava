@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                bat "javac Hello.java"
+                bat 'set path ="C:\Program Files\Java\jdk1.8.0_171\bin"'
             }
         }
         stage('Run') {
             steps {
-                bat "java Hello"
+                bat "javac Hello.java & java Hello"
             }
         }
 	    stage('emailNotification'){

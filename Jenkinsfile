@@ -2,14 +2,9 @@ pipeline {
     agent any
 	
     stages {
-        stage('Compile') {
+        stage('Hello') {
             steps {
-                bat 'set path ="C:\Program Files\Java\jdk1.8.0_171\bin"'
-            }
-        }
-        stage('Run') {
-            steps {
-                bat "javac Hello.java & java Hello"
+                bat 'echo "Hello"'
             }
         }
 	    stage('emailNotification'){

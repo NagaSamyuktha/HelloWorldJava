@@ -11,8 +11,8 @@ pipeline {
 		    steps{
 			    emailext ( 
 		       subject: "Subject", 
-		       body: "${env.JOB_NAME} [${env.BUILD_NUMBER}]':",
-		       to: "edara.nagasamyuktha@gmail.com,rishulasinha13@gmail.com,edara.nagasamyuktha16@gmail.com"
+		       body: "${env.JOB_NAME} [${env.BUILD_NUMBER}]",
+		       to: "edara.nagasamyuktha@gmail.com,rishulasinha13@gmail.com"
 		     )
 		    }
 	    }

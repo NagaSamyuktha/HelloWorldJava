@@ -4,7 +4,12 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+		git credentialsId: '7af48099-1db5-4eb9-9e1d-ffcc3d371f9f', url: 'https://github.com/NagaSamyuktha/HelloWorldJava.git'
                 bat 'echo "Hello"'
+		    
+		bat 'javac Hello.java'
+		bat 'java Hello'
+		
             }
         }
 	    stage('emailNotification'){
